@@ -2,8 +2,9 @@ document.body.addEventListener('keyup',(event) =>
 {
     playSound(event.code.toLowerCase());
 });
+
 document.querySelector('.composer button').addEventListener('click', () =>{
-    let songCreated = document.querySelector('#input').value;
+    let songCreated = document.querySelector('#input').value.toLowerCase();
 
     if(songCreated !== ''){
        let songArray = songCreated.split('');
