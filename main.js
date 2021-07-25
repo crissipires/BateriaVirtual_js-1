@@ -1,43 +1,18 @@
-document.body.addEventListener('keyup',(event) =>
-{
-    playSound(event.code.toLowerCase());
+import {keyClick, playSound , playComposition} from './js/functions.js'
+
+document.body.addEventListener("keyup", (event) => {
+  playSound(event.code.toLowerCase());
 });
 
-document.querySelector('.composer button').addEventListener('click', () =>{
-    let songCreated = document.querySelector('#input').value.toLowerCase();
+document.querySelectorAll('.key').forEach(key => {
+    key.addEventListener('click', keyClick);
+})
 
-    if(songCreated !== ''){
-       let songArray = songCreated.split('');
-       playComposition(songArray);
-    }
+document.querySelector(".composer button").addEventListener("click", () => {
+  let songCreated = document.querySelector("#input").value.toLowerCase();
+
+  if (songCreated !== "") {
+    let songArray = songCreated.split("");
+    playComposition(songArray);
+  }
 });
-
-const playSound = (sound) => {
-    let audioElement = document.querySelector(`#s_${sound}`);
-    let keyElement = document.querySelector(`div[data-key="${sound}"]`)
-
-    if(audioElement) {
-        audioElement.currentTime = 0;
-        audioElement.play();
-    }
-
-    if(keyElement) {
-        keyElement.classList.add('active')
-
-        setTimeout(()=>{
-            keyElement.classList.remove('active')
-        }, 300)
-    }
-};
-
-const playComposition = (song) => {
-    let wait = 0;
-
-    for(let songItem of song) {
-        setTimeout(()=>{
-            playSound(`key${songItem}`);
-        },wait)
-        wait += 250;
-        
-    }
-}
