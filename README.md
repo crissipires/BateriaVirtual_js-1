@@ -1,7 +1,7 @@
-<h1 align="center">#1 Desafio JavaScript <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/><p></h1>
+<h1 align="center">#1 MiniGames JavaScript <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/><p></h1>
 
 ## <a id="projeto">:link: Descrição do projeto</a>
-7 projetos em 7 dias, proposto pelo professor Bonieky Lacerdo.
+Mini games feitos em javascript para fixar o conhecimento adquirido.
 
 1ª Projeto: Uma bateria virtual, que reproduz os sons do instrumento.
 ## <a> 💻  Visualização </a>
@@ -14,7 +14,7 @@
 <a href=https://crissipires.github.io/bateriaVirtual_js-1> <img src='https://i.imgur.com/6a7qGta.png' height=400px width=800px align="center"/></a>
 
 <div>
-  [x] Adicionado evento Onclick para sistemas mobiles.
+  [x] Adicionado evento click para sistemas mobiles.
   
   [x] Alteração da fonte e do estilo. 
  </div>
